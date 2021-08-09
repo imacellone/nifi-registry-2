@@ -15,13 +15,43 @@
           "componentType" : "CONNECTION",
           "destination" : {
             "comments" : "",
-            "groupId" : "b20bf882-43f2-3d0f-bbe6-41710a9a8d9f",
+            "groupId" : "6d5731fc-32ff-3e7b-889b-7cbff543723c",
+            "id" : "3474e9f2-749b-3f8a-b195-df1736e4a81e",
+            "name" : "PutMongo",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "6d5731fc-32ff-3e7b-889b-7cbff543723c",
+          "identifier" : "05cc77d9-2b3a-3bbb-8133-d5a519237049",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "6d5731fc-32ff-3e7b-889b-7cbff543723c",
+            "id" : "4068029d-73ff-3189-898a-67c8c5a9cab6",
+            "name" : "JoltTransformJSON",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "6d5731fc-32ff-3e7b-889b-7cbff543723c",
             "id" : "1f450c20-a43b-37d1-96e6-7ce137611389",
             "name" : "ExtractText",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "b20bf882-43f2-3d0f-bbe6-41710a9a8d9f",
+          "groupIdentifier" : "6d5731fc-32ff-3e7b-889b-7cbff543723c",
           "identifier" : "4ad839c3-b1a7-37e0-b565-e4576fbc1221",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
@@ -32,7 +62,7 @@
           "selectedRelationships" : [ "success" ],
           "source" : {
             "comments" : "",
-            "groupId" : "b20bf882-43f2-3d0f-bbe6-41710a9a8d9f",
+            "groupId" : "6d5731fc-32ff-3e7b-889b-7cbff543723c",
             "id" : "8f79137d-aa29-34b0-a8a2-15a9f6959e39",
             "name" : "Read Kafka Topic",
             "type" : "PROCESSOR"
@@ -48,13 +78,13 @@
           "componentType" : "CONNECTION",
           "destination" : {
             "comments" : "",
-            "groupId" : "b20bf882-43f2-3d0f-bbe6-41710a9a8d9f",
+            "groupId" : "6d5731fc-32ff-3e7b-889b-7cbff543723c",
             "id" : "8beb4e4a-5e7c-3f2f-8fb1-2e1d8949b85a",
             "name" : "AttributesToJSON",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "b20bf882-43f2-3d0f-bbe6-41710a9a8d9f",
+          "groupIdentifier" : "6d5731fc-32ff-3e7b-889b-7cbff543723c",
           "identifier" : "189ac481-678e-329b-8882-90e4ef1bb117",
           "labelIndex" : 0,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
@@ -65,7 +95,7 @@
           "selectedRelationships" : [ "matched" ],
           "source" : {
             "comments" : "",
-            "groupId" : "b20bf882-43f2-3d0f-bbe6-41710a9a8d9f",
+            "groupId" : "6d5731fc-32ff-3e7b-889b-7cbff543723c",
             "id" : "1f450c20-a43b-37d1-96e6-7ce137611389",
             "name" : "ExtractText",
             "type" : "PROCESSOR"
@@ -78,13 +108,13 @@
           "componentType" : "CONNECTION",
           "destination" : {
             "comments" : "",
-            "groupId" : "b20bf882-43f2-3d0f-bbe6-41710a9a8d9f",
+            "groupId" : "6d5731fc-32ff-3e7b-889b-7cbff543723c",
             "id" : "4068029d-73ff-3189-898a-67c8c5a9cab6",
             "name" : "JoltTransformJSON",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "b20bf882-43f2-3d0f-bbe6-41710a9a8d9f",
+          "groupIdentifier" : "6d5731fc-32ff-3e7b-889b-7cbff543723c",
           "identifier" : "9438878f-3ca1-3666-9dd5-e677d01d189f",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
@@ -95,7 +125,7 @@
           "selectedRelationships" : [ "success" ],
           "source" : {
             "comments" : "",
-            "groupId" : "b20bf882-43f2-3d0f-bbe6-41710a9a8d9f",
+            "groupId" : "6d5731fc-32ff-3e7b-889b-7cbff543723c",
             "id" : "8beb4e4a-5e7c-3f2f-8fb1-2e1d8949b85a",
             "name" : "AttributesToJSON",
             "type" : "PROCESSOR"
@@ -106,14 +136,14 @@
         "flowFileConcurrency" : "UNBOUNDED",
         "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
         "funnels" : [ ],
-        "identifier" : "b20bf882-43f2-3d0f-bbe6-41710a9a8d9f",
+        "identifier" : "6d5731fc-32ff-3e7b-889b-7cbff543723c",
         "inputPorts" : [ ],
         "labels" : [ ],
         "name" : "Escrever no Mongo",
         "outputPorts" : [ ],
         "position" : {
-          "x" : 447.0,
-          "y" : 158.0
+          "x" : 700.0,
+          "y" : 281.0
         },
         "processGroups" : [ ],
         "processors" : [ {
@@ -128,7 +158,7 @@
           "componentType" : "PROCESSOR",
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
-          "groupIdentifier" : "b20bf882-43f2-3d0f-bbe6-41710a9a8d9f",
+          "groupIdentifier" : "6d5731fc-32ff-3e7b-889b-7cbff543723c",
           "identifier" : "3474e9f2-749b-3f8a-b195-df1736e4a81e",
           "name" : "PutMongo",
           "penaltyDuration" : "30 sec",
@@ -246,7 +276,7 @@
           "componentType" : "PROCESSOR",
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
-          "groupIdentifier" : "b20bf882-43f2-3d0f-bbe6-41710a9a8d9f",
+          "groupIdentifier" : "6d5731fc-32ff-3e7b-889b-7cbff543723c",
           "identifier" : "8beb4e4a-5e7c-3f2f-8fb1-2e1d8949b85a",
           "name" : "AttributesToJSON",
           "penaltyDuration" : "30 sec",
@@ -311,7 +341,7 @@
           "componentType" : "PROCESSOR",
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
-          "groupIdentifier" : "b20bf882-43f2-3d0f-bbe6-41710a9a8d9f",
+          "groupIdentifier" : "6d5731fc-32ff-3e7b-889b-7cbff543723c",
           "identifier" : "1f450c20-a43b-37d1-96e6-7ce137611389",
           "name" : "ExtractText",
           "penaltyDuration" : "30 sec",
@@ -534,7 +564,7 @@
           "type" : "org.apache.nifi.processors.standard.ExtractText",
           "yieldDuration" : "1 sec"
         }, {
-          "autoTerminatedRelationships" : [ ],
+          "autoTerminatedRelationships" : [ "failure" ],
           "bulletinLevel" : "WARN",
           "bundle" : {
             "artifact" : "nifi-standard-nar",
@@ -545,7 +575,7 @@
           "componentType" : "PROCESSOR",
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
-          "groupIdentifier" : "b20bf882-43f2-3d0f-bbe6-41710a9a8d9f",
+          "groupIdentifier" : "6d5731fc-32ff-3e7b-889b-7cbff543723c",
           "identifier" : "4068029d-73ff-3189-898a-67c8c5a9cab6",
           "name" : "JoltTransformJSON",
           "penaltyDuration" : "30 sec",
@@ -554,6 +584,7 @@
             "y" : 344.0
           },
           "properties" : {
+            "jolt-spec" : "[{\n    \"operation\": \"modify-overwrite-beta\",\n    \"spec\": {\n      \"finalWeight\": \"=toLong\",\n      \"hoursPerWeek\": \"=toInteger\",\n      \"educationNum\": \"=toInteger\",\n      \"capitalLoss\": \"=toDouble\",\n      \"capitalGain\": \"=toDouble\",\n      \"age\": \"=toInteger\",\n      \"income\": \"=toLower\",\n      \"education\": \"=toLower\",\n      \"occupation\": \"=toLower\",\n      \"race\": \"=toLower\",\n      \"sex\": \"=toLower\",\n      \"nativeCountry\": \"=toLower\",\n      \"workClass\":\"=toLower\",\n      \"relationship\": \"=toLower\",\n      \"maritalStatus\": \"=toLower\"\n    }\n}]",
             "jolt-transform" : "jolt-transform-chain",
             "pretty_print" : "false",
             "Transform Cache Size" : "1"
@@ -615,7 +646,7 @@
           "componentType" : "PROCESSOR",
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
-          "groupIdentifier" : "b20bf882-43f2-3d0f-bbe6-41710a9a8d9f",
+          "groupIdentifier" : "6d5731fc-32ff-3e7b-889b-7cbff543723c",
           "identifier" : "8f79137d-aa29-34b0-a8a2-15a9f6959e39",
           "name" : "Read Kafka Topic",
           "penaltyDuration" : "30 sec",
