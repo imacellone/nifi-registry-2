@@ -15,13 +15,13 @@
           "componentType" : "CONNECTION",
           "destination" : {
             "comments" : "",
-            "groupId" : "11b3c847-6f9b-3bbc-b023-729bceb6b4da",
+            "groupId" : "2acc69e9-7f83-3f26-b4f9-47e4984423c8",
             "id" : "1f450c20-a43b-37d1-96e6-7ce137611389",
             "name" : "ExtractText",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "11b3c847-6f9b-3bbc-b023-729bceb6b4da",
+          "groupIdentifier" : "2acc69e9-7f83-3f26-b4f9-47e4984423c8",
           "identifier" : "4ad839c3-b1a7-37e0-b565-e4576fbc1221",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
@@ -32,42 +32,9 @@
           "selectedRelationships" : [ "success" ],
           "source" : {
             "comments" : "",
-            "groupId" : "11b3c847-6f9b-3bbc-b023-729bceb6b4da",
+            "groupId" : "2acc69e9-7f83-3f26-b4f9-47e4984423c8",
             "id" : "8f79137d-aa29-34b0-a8a2-15a9f6959e39",
             "name" : "Read Kafka Topic",
-            "type" : "PROCESSOR"
-          },
-          "zIndex" : 0
-        }, {
-          "backPressureDataSizeThreshold" : "1 GB",
-          "backPressureObjectThreshold" : 10000,
-          "bends" : [ {
-            "x" : 1296.0,
-            "y" : 408.0
-          } ],
-          "componentType" : "CONNECTION",
-          "destination" : {
-            "comments" : "",
-            "groupId" : "11b3c847-6f9b-3bbc-b023-729bceb6b4da",
-            "id" : "3474e9f2-749b-3f8a-b195-df1736e4a81e",
-            "name" : "PutMongo",
-            "type" : "PROCESSOR"
-          },
-          "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "11b3c847-6f9b-3bbc-b023-729bceb6b4da",
-          "identifier" : "9f1cbd0d-430d-3c16-ad24-f0aa842e17a1",
-          "labelIndex" : 0,
-          "loadBalanceCompression" : "DO_NOT_COMPRESS",
-          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-          "name" : "",
-          "partitioningAttribute" : "",
-          "prioritizers" : [ ],
-          "selectedRelationships" : [ "success" ],
-          "source" : {
-            "comments" : "",
-            "groupId" : "11b3c847-6f9b-3bbc-b023-729bceb6b4da",
-            "id" : "8beb4e4a-5e7c-3f2f-8fb1-2e1d8949b85a",
-            "name" : "AttributesToJSON",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -81,13 +48,13 @@
           "componentType" : "CONNECTION",
           "destination" : {
             "comments" : "",
-            "groupId" : "11b3c847-6f9b-3bbc-b023-729bceb6b4da",
+            "groupId" : "2acc69e9-7f83-3f26-b4f9-47e4984423c8",
             "id" : "8beb4e4a-5e7c-3f2f-8fb1-2e1d8949b85a",
             "name" : "AttributesToJSON",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "11b3c847-6f9b-3bbc-b023-729bceb6b4da",
+          "groupIdentifier" : "2acc69e9-7f83-3f26-b4f9-47e4984423c8",
           "identifier" : "189ac481-678e-329b-8882-90e4ef1bb117",
           "labelIndex" : 0,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
@@ -98,9 +65,39 @@
           "selectedRelationships" : [ "matched" ],
           "source" : {
             "comments" : "",
-            "groupId" : "11b3c847-6f9b-3bbc-b023-729bceb6b4da",
+            "groupId" : "2acc69e9-7f83-3f26-b4f9-47e4984423c8",
             "id" : "1f450c20-a43b-37d1-96e6-7ce137611389",
             "name" : "ExtractText",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "2acc69e9-7f83-3f26-b4f9-47e4984423c8",
+            "id" : "4068029d-73ff-3189-898a-67c8c5a9cab6",
+            "name" : "JoltTransformJSON",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "2acc69e9-7f83-3f26-b4f9-47e4984423c8",
+          "identifier" : "9438878f-3ca1-3666-9dd5-e677d01d189f",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "2acc69e9-7f83-3f26-b4f9-47e4984423c8",
+            "id" : "8beb4e4a-5e7c-3f2f-8fb1-2e1d8949b85a",
+            "name" : "AttributesToJSON",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -109,14 +106,14 @@
         "flowFileConcurrency" : "UNBOUNDED",
         "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
         "funnels" : [ ],
-        "identifier" : "11b3c847-6f9b-3bbc-b023-729bceb6b4da",
+        "identifier" : "2acc69e9-7f83-3f26-b4f9-47e4984423c8",
         "inputPorts" : [ ],
         "labels" : [ ],
         "name" : "Escrever no Mongo",
         "outputPorts" : [ ],
         "position" : {
-          "x" : 412.0,
-          "y" : 145.0
+          "x" : 458.0,
+          "y" : 196.0
         },
         "processGroups" : [ ],
         "processors" : [ {
@@ -131,7 +128,7 @@
           "componentType" : "PROCESSOR",
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
-          "groupIdentifier" : "11b3c847-6f9b-3bbc-b023-729bceb6b4da",
+          "groupIdentifier" : "2acc69e9-7f83-3f26-b4f9-47e4984423c8",
           "identifier" : "3474e9f2-749b-3f8a-b195-df1736e4a81e",
           "name" : "PutMongo",
           "penaltyDuration" : "30 sec",
@@ -249,18 +246,18 @@
           "componentType" : "PROCESSOR",
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
-          "groupIdentifier" : "11b3c847-6f9b-3bbc-b023-729bceb6b4da",
+          "groupIdentifier" : "2acc69e9-7f83-3f26-b4f9-47e4984423c8",
           "identifier" : "8beb4e4a-5e7c-3f2f-8fb1-2e1d8949b85a",
           "name" : "AttributesToJSON",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 680.0,
+            "x" : 640.0,
             "y" : 344.0
           },
           "properties" : {
             "Destination" : "flowfile-content",
             "Null Value" : "true",
-            "Attributes List" : "account_number,transaction_date,details,cheque_number,withdrawal_value,deposit_value,balance_value",
+            "Attributes List" : "age,workClass,finalWeight,education,educationNum,maritalStatus,occupation,relationship,race,sex,capitalGain,capitalLoss,hoursPerWeek,nativeCountry,income",
             "Include Core Attributes" : "false"
           },
           "propertyDescriptors" : {
@@ -314,7 +311,7 @@
           "componentType" : "PROCESSOR",
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
-          "groupIdentifier" : "11b3c847-6f9b-3bbc-b023-729bceb6b4da",
+          "groupIdentifier" : "2acc69e9-7f83-3f26-b4f9-47e4984423c8",
           "identifier" : "1f450c20-a43b-37d1-96e6-7ce137611389",
           "name" : "ExtractText",
           "penaltyDuration" : "30 sec",
@@ -323,81 +320,58 @@
             "y" : 168.0
           },
           "properties" : {
-            "Enable Unicode Predefined Character Classes" : "false",
-            "transaction_date" : ".*?;(.*?);",
-            "Permit Whitespace and Comments in Pattern" : "false",
-            "account_number" : "(.*?);",
-            "Enable Unicode-aware Case Folding" : "false",
-            "withdrawal_value" : "^.*;.*;.*;(.*);",
-            "cheque_number" : "^.*;.*;(.*);.*;",
-            "Enable DOTALL Mode" : "false",
-            "Enable Unix Lines Mode" : "false",
+            "income" : "^(?:[^\\s]+\\s+){14}([^\\s]+)",
+            "finalWeight" : "^(?:[^\\s]+\\s+){2}([^\\s]+)",
+            "education" : "^(?:[^\\s]+\\s+){3}([^\\s]+)",
+            "occupation" : "^(?:[^\\s]+\\s+){6}([^\\s]+)",
             "Maximum Buffer Size" : "1 MB",
-            "Enable Canonical Equivalence" : "false",
-            "balance_value" : "^.*;.*;.*;.*;.*;(.*);",
-            "Enable Case-insensitive Matching" : "false",
-            "deposit_value" : "^.*;.*;.*;.*;(.*);",
             "Enable Multiline Mode" : "false",
+            "workClass" : "^(?:[^\\s]+\\s+){1}([^\\s]+)",
             "Maximum Capture Group Length" : "1024",
             "Enable Literal Parsing of the Pattern" : "false",
-            "details" : ";.*?;(.*?);",
-            "Character Set" : "UTF-8",
+            "relationship" : "^(?:[^\\s]+\\s+){7}([^\\s]+)",
             "Include Capture Group 0" : "true",
-            "extract-text-enable-repeating-capture-group" : "false"
+            "extract-text-enable-repeating-capture-group" : "false",
+            "Enable Unicode Predefined Character Classes" : "false",
+            "Permit Whitespace and Comments in Pattern" : "false",
+            "Enable Unicode-aware Case Folding" : "false",
+            "hoursPerWeek" : "^(?:[^\\s]+\\s+){12}([^\\s]+)",
+            "race" : "^(?:[^\\s]+\\s+){8}([^\\s]+)",
+            "sex" : "^(?:[^\\s]+\\s+){9}([^\\s]+)",
+            "Enable DOTALL Mode" : "false",
+            "Enable Unix Lines Mode" : "false",
+            "educationNum" : "^(?:[^\\s]+\\s+){4}([^\\s]+)",
+            "Enable Canonical Equivalence" : "false",
+            "Enable Case-insensitive Matching" : "false",
+            "nativeCountry" : "^(?:[^\\s]+\\s+){13}([^\\s]+)",
+            "capitalGain" : "^(?:[^\\s]+\\s+){10}([^\\s]+)",
+            "Character Set" : "UTF-8",
+            "maritalStatus" : "^(?:[^\\s]+\\s+){5}([^\\s]+)",
+            "age" : "^(?:[^\\s]+\\s+){0}([^\\s]+)"
           },
           "propertyDescriptors" : {
-            "Enable Unicode Predefined Character Classes" : {
-              "displayName" : "Enable Unicode Predefined Character Classes",
+            "income" : {
+              "displayName" : "income",
               "identifiesControllerService" : false,
-              "name" : "Enable Unicode Predefined Character Classes",
+              "name" : "income",
               "sensitive" : false
             },
-            "transaction_date" : {
-              "displayName" : "transaction_date",
+            "finalWeight" : {
+              "displayName" : "finalWeight",
               "identifiesControllerService" : false,
-              "name" : "transaction_date",
+              "name" : "finalWeight",
               "sensitive" : false
             },
-            "Permit Whitespace and Comments in Pattern" : {
-              "displayName" : "Permit Whitespace and Comments in Pattern",
+            "education" : {
+              "displayName" : "education",
               "identifiesControllerService" : false,
-              "name" : "Permit Whitespace and Comments in Pattern",
+              "name" : "education",
               "sensitive" : false
             },
-            "account_number" : {
-              "displayName" : "account_number",
+            "occupation" : {
+              "displayName" : "occupation",
               "identifiesControllerService" : false,
-              "name" : "account_number",
-              "sensitive" : false
-            },
-            "Enable Unicode-aware Case Folding" : {
-              "displayName" : "Enable Unicode-aware Case Folding",
-              "identifiesControllerService" : false,
-              "name" : "Enable Unicode-aware Case Folding",
-              "sensitive" : false
-            },
-            "withdrawal_value" : {
-              "displayName" : "withdrawal_value",
-              "identifiesControllerService" : false,
-              "name" : "withdrawal_value",
-              "sensitive" : false
-            },
-            "cheque_number" : {
-              "displayName" : "cheque_number",
-              "identifiesControllerService" : false,
-              "name" : "cheque_number",
-              "sensitive" : false
-            },
-            "Enable DOTALL Mode" : {
-              "displayName" : "Enable DOTALL Mode",
-              "identifiesControllerService" : false,
-              "name" : "Enable DOTALL Mode",
-              "sensitive" : false
-            },
-            "Enable Unix Lines Mode" : {
-              "displayName" : "Enable Unix Lines Mode",
-              "identifiesControllerService" : false,
-              "name" : "Enable Unix Lines Mode",
+              "name" : "occupation",
               "sensitive" : false
             },
             "Maximum Buffer Size" : {
@@ -406,34 +380,16 @@
               "name" : "Maximum Buffer Size",
               "sensitive" : false
             },
-            "Enable Canonical Equivalence" : {
-              "displayName" : "Enable Canonical Equivalence",
-              "identifiesControllerService" : false,
-              "name" : "Enable Canonical Equivalence",
-              "sensitive" : false
-            },
-            "balance_value" : {
-              "displayName" : "balance_value",
-              "identifiesControllerService" : false,
-              "name" : "balance_value",
-              "sensitive" : false
-            },
-            "Enable Case-insensitive Matching" : {
-              "displayName" : "Enable Case-insensitive Matching",
-              "identifiesControllerService" : false,
-              "name" : "Enable Case-insensitive Matching",
-              "sensitive" : false
-            },
-            "deposit_value" : {
-              "displayName" : "deposit_value",
-              "identifiesControllerService" : false,
-              "name" : "deposit_value",
-              "sensitive" : false
-            },
             "Enable Multiline Mode" : {
               "displayName" : "Enable Multiline Mode",
               "identifiesControllerService" : false,
               "name" : "Enable Multiline Mode",
+              "sensitive" : false
+            },
+            "workClass" : {
+              "displayName" : "workClass",
+              "identifiesControllerService" : false,
+              "name" : "workClass",
               "sensitive" : false
             },
             "Maximum Capture Group Length" : {
@@ -448,16 +404,10 @@
               "name" : "Enable Literal Parsing of the Pattern",
               "sensitive" : false
             },
-            "details" : {
-              "displayName" : "details",
+            "relationship" : {
+              "displayName" : "relationship",
               "identifiesControllerService" : false,
-              "name" : "details",
-              "sensitive" : false
-            },
-            "Character Set" : {
-              "displayName" : "Character Set",
-              "identifiesControllerService" : false,
-              "name" : "Character Set",
+              "name" : "relationship",
               "sensitive" : false
             },
             "Include Capture Group 0" : {
@@ -470,6 +420,102 @@
               "displayName" : "Enable repeating capture group",
               "identifiesControllerService" : false,
               "name" : "extract-text-enable-repeating-capture-group",
+              "sensitive" : false
+            },
+            "Enable Unicode Predefined Character Classes" : {
+              "displayName" : "Enable Unicode Predefined Character Classes",
+              "identifiesControllerService" : false,
+              "name" : "Enable Unicode Predefined Character Classes",
+              "sensitive" : false
+            },
+            "Permit Whitespace and Comments in Pattern" : {
+              "displayName" : "Permit Whitespace and Comments in Pattern",
+              "identifiesControllerService" : false,
+              "name" : "Permit Whitespace and Comments in Pattern",
+              "sensitive" : false
+            },
+            "Enable Unicode-aware Case Folding" : {
+              "displayName" : "Enable Unicode-aware Case Folding",
+              "identifiesControllerService" : false,
+              "name" : "Enable Unicode-aware Case Folding",
+              "sensitive" : false
+            },
+            "hoursPerWeek" : {
+              "displayName" : "hoursPerWeek",
+              "identifiesControllerService" : false,
+              "name" : "hoursPerWeek",
+              "sensitive" : false
+            },
+            "race" : {
+              "displayName" : "race",
+              "identifiesControllerService" : false,
+              "name" : "race",
+              "sensitive" : false
+            },
+            "sex" : {
+              "displayName" : "sex",
+              "identifiesControllerService" : false,
+              "name" : "sex",
+              "sensitive" : false
+            },
+            "Enable DOTALL Mode" : {
+              "displayName" : "Enable DOTALL Mode",
+              "identifiesControllerService" : false,
+              "name" : "Enable DOTALL Mode",
+              "sensitive" : false
+            },
+            "Enable Unix Lines Mode" : {
+              "displayName" : "Enable Unix Lines Mode",
+              "identifiesControllerService" : false,
+              "name" : "Enable Unix Lines Mode",
+              "sensitive" : false
+            },
+            "educationNum" : {
+              "displayName" : "educationNum",
+              "identifiesControllerService" : false,
+              "name" : "educationNum",
+              "sensitive" : false
+            },
+            "Enable Canonical Equivalence" : {
+              "displayName" : "Enable Canonical Equivalence",
+              "identifiesControllerService" : false,
+              "name" : "Enable Canonical Equivalence",
+              "sensitive" : false
+            },
+            "Enable Case-insensitive Matching" : {
+              "displayName" : "Enable Case-insensitive Matching",
+              "identifiesControllerService" : false,
+              "name" : "Enable Case-insensitive Matching",
+              "sensitive" : false
+            },
+            "nativeCountry" : {
+              "displayName" : "nativeCountry",
+              "identifiesControllerService" : false,
+              "name" : "nativeCountry",
+              "sensitive" : false
+            },
+            "capitalGain" : {
+              "displayName" : "capitalGain",
+              "identifiesControllerService" : false,
+              "name" : "capitalGain",
+              "sensitive" : false
+            },
+            "Character Set" : {
+              "displayName" : "Character Set",
+              "identifiesControllerService" : false,
+              "name" : "Character Set",
+              "sensitive" : false
+            },
+            "maritalStatus" : {
+              "displayName" : "maritalStatus",
+              "identifiesControllerService" : false,
+              "name" : "maritalStatus",
+              "sensitive" : false
+            },
+            "age" : {
+              "displayName" : "age",
+              "identifiesControllerService" : false,
+              "name" : "age",
               "sensitive" : false
             }
           },
@@ -484,6 +530,76 @@
           "autoTerminatedRelationships" : [ ],
           "bulletinLevel" : "WARN",
           "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.12.1"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "2acc69e9-7f83-3f26-b4f9-47e4984423c8",
+          "identifier" : "4068029d-73ff-3189-898a-67c8c5a9cab6",
+          "name" : "JoltTransformJSON",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 1296.0,
+            "y" : 344.0
+          },
+          "properties" : {
+            "jolt-transform" : "jolt-transform-chain",
+            "pretty_print" : "false",
+            "Transform Cache Size" : "1"
+          },
+          "propertyDescriptors" : {
+            "jolt-spec" : {
+              "displayName" : "Jolt Specification",
+              "identifiesControllerService" : false,
+              "name" : "jolt-spec",
+              "sensitive" : false
+            },
+            "jolt-transform" : {
+              "displayName" : "Jolt Transformation DSL",
+              "identifiesControllerService" : false,
+              "name" : "jolt-transform",
+              "sensitive" : false
+            },
+            "jolt-custom-class" : {
+              "displayName" : "Custom Transformation Class Name",
+              "identifiesControllerService" : false,
+              "name" : "jolt-custom-class",
+              "sensitive" : false
+            },
+            "jolt-custom-modules" : {
+              "displayName" : "Custom Module Directory",
+              "identifiesControllerService" : false,
+              "name" : "jolt-custom-modules",
+              "sensitive" : false
+            },
+            "pretty_print" : {
+              "displayName" : "Pretty Print",
+              "identifiesControllerService" : false,
+              "name" : "pretty_print",
+              "sensitive" : false
+            },
+            "Transform Cache Size" : {
+              "displayName" : "Transform Cache Size",
+              "identifiesControllerService" : false,
+              "name" : "Transform Cache Size",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.JoltTransformJSON",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
             "artifact" : "nifi-kafka-2-0-nar",
             "group" : "org.apache.nifi",
             "version" : "1.12.1"
@@ -492,7 +608,7 @@
           "componentType" : "PROCESSOR",
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
-          "groupIdentifier" : "11b3c847-6f9b-3bbc-b023-729bceb6b4da",
+          "groupIdentifier" : "2acc69e9-7f83-3f26-b4f9-47e4984423c8",
           "identifier" : "8f79137d-aa29-34b0-a8a2-15a9f6959e39",
           "name" : "Read Kafka Topic",
           "penaltyDuration" : "30 sec",
