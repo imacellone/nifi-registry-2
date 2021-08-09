@@ -170,9 +170,9 @@
             "Upsert" : "false",
             "ssl-client-auth" : "REQUIRED",
             "Mode" : "insert",
-            "Mongo Database Name" : "banking",
+            "Mongo Database Name" : "raw",
             "Mongo URI" : "mongodb://mongodb:27017",
-            "Mongo Collection Name" : "transactions",
+            "Mongo Collection Name" : "adults",
             "put-mongo-update-mode" : "doc",
             "Write Concern" : "ACKNOWLEDGED",
             "Character Set" : "UTF-8"
