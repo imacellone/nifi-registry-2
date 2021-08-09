@@ -15,13 +15,13 @@
           "componentType" : "CONNECTION",
           "destination" : {
             "comments" : "",
-            "groupId" : "2acc69e9-7f83-3f26-b4f9-47e4984423c8",
+            "groupId" : "b20bf882-43f2-3d0f-bbe6-41710a9a8d9f",
             "id" : "1f450c20-a43b-37d1-96e6-7ce137611389",
             "name" : "ExtractText",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "2acc69e9-7f83-3f26-b4f9-47e4984423c8",
+          "groupIdentifier" : "b20bf882-43f2-3d0f-bbe6-41710a9a8d9f",
           "identifier" : "4ad839c3-b1a7-37e0-b565-e4576fbc1221",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
@@ -32,7 +32,7 @@
           "selectedRelationships" : [ "success" ],
           "source" : {
             "comments" : "",
-            "groupId" : "2acc69e9-7f83-3f26-b4f9-47e4984423c8",
+            "groupId" : "b20bf882-43f2-3d0f-bbe6-41710a9a8d9f",
             "id" : "8f79137d-aa29-34b0-a8a2-15a9f6959e39",
             "name" : "Read Kafka Topic",
             "type" : "PROCESSOR"
@@ -48,13 +48,13 @@
           "componentType" : "CONNECTION",
           "destination" : {
             "comments" : "",
-            "groupId" : "2acc69e9-7f83-3f26-b4f9-47e4984423c8",
+            "groupId" : "b20bf882-43f2-3d0f-bbe6-41710a9a8d9f",
             "id" : "8beb4e4a-5e7c-3f2f-8fb1-2e1d8949b85a",
             "name" : "AttributesToJSON",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "2acc69e9-7f83-3f26-b4f9-47e4984423c8",
+          "groupIdentifier" : "b20bf882-43f2-3d0f-bbe6-41710a9a8d9f",
           "identifier" : "189ac481-678e-329b-8882-90e4ef1bb117",
           "labelIndex" : 0,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
@@ -65,7 +65,7 @@
           "selectedRelationships" : [ "matched" ],
           "source" : {
             "comments" : "",
-            "groupId" : "2acc69e9-7f83-3f26-b4f9-47e4984423c8",
+            "groupId" : "b20bf882-43f2-3d0f-bbe6-41710a9a8d9f",
             "id" : "1f450c20-a43b-37d1-96e6-7ce137611389",
             "name" : "ExtractText",
             "type" : "PROCESSOR"
@@ -78,13 +78,13 @@
           "componentType" : "CONNECTION",
           "destination" : {
             "comments" : "",
-            "groupId" : "2acc69e9-7f83-3f26-b4f9-47e4984423c8",
+            "groupId" : "b20bf882-43f2-3d0f-bbe6-41710a9a8d9f",
             "id" : "4068029d-73ff-3189-898a-67c8c5a9cab6",
             "name" : "JoltTransformJSON",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "2acc69e9-7f83-3f26-b4f9-47e4984423c8",
+          "groupIdentifier" : "b20bf882-43f2-3d0f-bbe6-41710a9a8d9f",
           "identifier" : "9438878f-3ca1-3666-9dd5-e677d01d189f",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
@@ -95,7 +95,7 @@
           "selectedRelationships" : [ "success" ],
           "source" : {
             "comments" : "",
-            "groupId" : "2acc69e9-7f83-3f26-b4f9-47e4984423c8",
+            "groupId" : "b20bf882-43f2-3d0f-bbe6-41710a9a8d9f",
             "id" : "8beb4e4a-5e7c-3f2f-8fb1-2e1d8949b85a",
             "name" : "AttributesToJSON",
             "type" : "PROCESSOR"
@@ -106,14 +106,14 @@
         "flowFileConcurrency" : "UNBOUNDED",
         "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
         "funnels" : [ ],
-        "identifier" : "2acc69e9-7f83-3f26-b4f9-47e4984423c8",
+        "identifier" : "b20bf882-43f2-3d0f-bbe6-41710a9a8d9f",
         "inputPorts" : [ ],
         "labels" : [ ],
         "name" : "Escrever no Mongo",
         "outputPorts" : [ ],
         "position" : {
-          "x" : 458.0,
-          "y" : 196.0
+          "x" : 447.0,
+          "y" : 158.0
         },
         "processGroups" : [ ],
         "processors" : [ {
@@ -128,7 +128,7 @@
           "componentType" : "PROCESSOR",
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
-          "groupIdentifier" : "2acc69e9-7f83-3f26-b4f9-47e4984423c8",
+          "groupIdentifier" : "b20bf882-43f2-3d0f-bbe6-41710a9a8d9f",
           "identifier" : "3474e9f2-749b-3f8a-b195-df1736e4a81e",
           "name" : "PutMongo",
           "penaltyDuration" : "30 sec",
@@ -246,7 +246,7 @@
           "componentType" : "PROCESSOR",
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
-          "groupIdentifier" : "2acc69e9-7f83-3f26-b4f9-47e4984423c8",
+          "groupIdentifier" : "b20bf882-43f2-3d0f-bbe6-41710a9a8d9f",
           "identifier" : "8beb4e4a-5e7c-3f2f-8fb1-2e1d8949b85a",
           "name" : "AttributesToJSON",
           "penaltyDuration" : "30 sec",
@@ -311,7 +311,7 @@
           "componentType" : "PROCESSOR",
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
-          "groupIdentifier" : "2acc69e9-7f83-3f26-b4f9-47e4984423c8",
+          "groupIdentifier" : "b20bf882-43f2-3d0f-bbe6-41710a9a8d9f",
           "identifier" : "1f450c20-a43b-37d1-96e6-7ce137611389",
           "name" : "ExtractText",
           "penaltyDuration" : "30 sec",
@@ -341,6 +341,7 @@
             "Enable DOTALL Mode" : "false",
             "Enable Unix Lines Mode" : "false",
             "educationNum" : "^(?:[^\\s]+\\s+){4}([^\\s]+)",
+            "capitalLoss" : "^(?:[^\\s]+\\s+){11}([^\\s]+)",
             "Enable Canonical Equivalence" : "false",
             "Enable Case-insensitive Matching" : "false",
             "nativeCountry" : "^(?:[^\\s]+\\s+){13}([^\\s]+)",
@@ -476,6 +477,12 @@
               "name" : "educationNum",
               "sensitive" : false
             },
+            "capitalLoss" : {
+              "displayName" : "capitalLoss",
+              "identifiesControllerService" : false,
+              "name" : "capitalLoss",
+              "sensitive" : false
+            },
             "Enable Canonical Equivalence" : {
               "displayName" : "Enable Canonical Equivalence",
               "identifiesControllerService" : false,
@@ -538,7 +545,7 @@
           "componentType" : "PROCESSOR",
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
-          "groupIdentifier" : "2acc69e9-7f83-3f26-b4f9-47e4984423c8",
+          "groupIdentifier" : "b20bf882-43f2-3d0f-bbe6-41710a9a8d9f",
           "identifier" : "4068029d-73ff-3189-898a-67c8c5a9cab6",
           "name" : "JoltTransformJSON",
           "penaltyDuration" : "30 sec",
@@ -608,7 +615,7 @@
           "componentType" : "PROCESSOR",
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
-          "groupIdentifier" : "2acc69e9-7f83-3f26-b4f9-47e4984423c8",
+          "groupIdentifier" : "b20bf882-43f2-3d0f-bbe6-41710a9a8d9f",
           "identifier" : "8f79137d-aa29-34b0-a8a2-15a9f6959e39",
           "name" : "Read Kafka Topic",
           "penaltyDuration" : "30 sec",
