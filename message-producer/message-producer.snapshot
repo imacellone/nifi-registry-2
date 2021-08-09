@@ -11,36 +11,6 @@
         "connections" : [ {
           "backPressureDataSizeThreshold" : "1 GB",
           "backPressureObjectThreshold" : 10000,
-          "bends" : [ ],
-          "componentType" : "CONNECTION",
-          "destination" : {
-            "comments" : "",
-            "groupId" : "7d738cec-4d7a-3b30-8ddc-2ee3f6eada15",
-            "id" : "64e839f2-68a1-3037-b875-d76a896e023d",
-            "name" : "PublishKafka_2_6",
-            "type" : "PROCESSOR"
-          },
-          "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "7d738cec-4d7a-3b30-8ddc-2ee3f6eada15",
-          "identifier" : "986aee7a-c946-3093-8be7-083838e9084a",
-          "labelIndex" : 1,
-          "loadBalanceCompression" : "DO_NOT_COMPRESS",
-          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-          "name" : "",
-          "partitioningAttribute" : "",
-          "prioritizers" : [ ],
-          "selectedRelationships" : [ "splits" ],
-          "source" : {
-            "comments" : "",
-            "groupId" : "7d738cec-4d7a-3b30-8ddc-2ee3f6eada15",
-            "id" : "265797b5-c852-3b45-a267-253a0f3d99a4",
-            "name" : "Split CSV Lines",
-            "type" : "PROCESSOR"
-          },
-          "zIndex" : 0
-        }, {
-          "backPressureDataSizeThreshold" : "1 GB",
-          "backPressureObjectThreshold" : 10000,
           "bends" : [ {
             "x" : 608.0,
             "y" : 56.0
@@ -48,13 +18,13 @@
           "componentType" : "CONNECTION",
           "destination" : {
             "comments" : "",
-            "groupId" : "7d738cec-4d7a-3b30-8ddc-2ee3f6eada15",
+            "groupId" : "6cc825da-18f9-39b9-ad8f-129cb22274cc",
             "id" : "2624f415-21a4-3427-a56c-773609c00617",
             "name" : "ConvertExcelToCSVProcessor",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "7d738cec-4d7a-3b30-8ddc-2ee3f6eada15",
+          "groupIdentifier" : "6cc825da-18f9-39b9-ad8f-129cb22274cc",
           "identifier" : "62b1d2c3-0503-3c36-9161-adde3e4a3e26",
           "labelIndex" : 0,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
@@ -65,9 +35,39 @@
           "selectedRelationships" : [ "success" ],
           "source" : {
             "comments" : "",
-            "groupId" : "7d738cec-4d7a-3b30-8ddc-2ee3f6eada15",
+            "groupId" : "6cc825da-18f9-39b9-ad8f-129cb22274cc",
             "id" : "6d9179df-4043-33e2-ad7a-865b584f6d2b",
             "name" : "Read bank.xlsx",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "6cc825da-18f9-39b9-ad8f-129cb22274cc",
+            "id" : "64e839f2-68a1-3037-b875-d76a896e023d",
+            "name" : "PublishKafka_2_6",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "6cc825da-18f9-39b9-ad8f-129cb22274cc",
+          "identifier" : "986aee7a-c946-3093-8be7-083838e9084a",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "splits" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "6cc825da-18f9-39b9-ad8f-129cb22274cc",
+            "id" : "265797b5-c852-3b45-a267-253a0f3d99a4",
+            "name" : "Split CSV Lines",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -81,13 +81,13 @@
           "componentType" : "CONNECTION",
           "destination" : {
             "comments" : "",
-            "groupId" : "7d738cec-4d7a-3b30-8ddc-2ee3f6eada15",
+            "groupId" : "6cc825da-18f9-39b9-ad8f-129cb22274cc",
             "id" : "265797b5-c852-3b45-a267-253a0f3d99a4",
             "name" : "Split CSV Lines",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "7d738cec-4d7a-3b30-8ddc-2ee3f6eada15",
+          "groupIdentifier" : "6cc825da-18f9-39b9-ad8f-129cb22274cc",
           "identifier" : "49987b03-31d6-3512-a9d3-df1c8e9341df",
           "labelIndex" : 0,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
@@ -98,7 +98,7 @@
           "selectedRelationships" : [ "success" ],
           "source" : {
             "comments" : "",
-            "groupId" : "7d738cec-4d7a-3b30-8ddc-2ee3f6eada15",
+            "groupId" : "6cc825da-18f9-39b9-ad8f-129cb22274cc",
             "id" : "2624f415-21a4-3427-a56c-773609c00617",
             "name" : "ConvertExcelToCSVProcessor",
             "type" : "PROCESSOR"
@@ -109,14 +109,14 @@
         "flowFileConcurrency" : "UNBOUNDED",
         "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
         "funnels" : [ ],
-        "identifier" : "7d738cec-4d7a-3b30-8ddc-2ee3f6eada15",
+        "identifier" : "6cc825da-18f9-39b9-ad8f-129cb22274cc",
         "inputPorts" : [ ],
         "labels" : [ ],
-        "name" : "Leitura Excel",
+        "name" : "Leitura Streaming",
         "outputPorts" : [ ],
         "position" : {
-          "x" : 507.0,
-          "y" : 168.0
+          "x" : 409.0,
+          "y" : 94.0
         },
         "processGroups" : [ ],
         "processors" : [ {
@@ -131,7 +131,7 @@
           "componentType" : "PROCESSOR",
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
-          "groupIdentifier" : "7d738cec-4d7a-3b30-8ddc-2ee3f6eada15",
+          "groupIdentifier" : "6cc825da-18f9-39b9-ad8f-129cb22274cc",
           "identifier" : "2624f415-21a4-3427-a56c-773609c00617",
           "name" : "ConvertExcelToCSVProcessor",
           "penaltyDuration" : "30 sec",
@@ -263,7 +263,7 @@
           "componentType" : "PROCESSOR",
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
-          "groupIdentifier" : "7d738cec-4d7a-3b30-8ddc-2ee3f6eada15",
+          "groupIdentifier" : "6cc825da-18f9-39b9-ad8f-129cb22274cc",
           "identifier" : "64e839f2-68a1-3037-b875-d76a896e023d",
           "name" : "PublishKafka_2_6",
           "penaltyDuration" : "30 sec",
@@ -465,7 +465,7 @@
           "componentType" : "PROCESSOR",
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
-          "groupIdentifier" : "7d738cec-4d7a-3b30-8ddc-2ee3f6eada15",
+          "groupIdentifier" : "6cc825da-18f9-39b9-ad8f-129cb22274cc",
           "identifier" : "265797b5-c852-3b45-a267-253a0f3d99a4",
           "name" : "Split CSV Lines",
           "penaltyDuration" : "30 sec",
@@ -529,7 +529,7 @@
           "componentType" : "PROCESSOR",
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
-          "groupIdentifier" : "7d738cec-4d7a-3b30-8ddc-2ee3f6eada15",
+          "groupIdentifier" : "6cc825da-18f9-39b9-ad8f-129cb22274cc",
           "identifier" : "6d9179df-4043-33e2-ad7a-865b584f6d2b",
           "name" : "Read bank.xlsx",
           "penaltyDuration" : "30 sec",
@@ -628,6 +628,98 @@
           "schedulingStrategy" : "TIMER_DRIVEN",
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.GetFile",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "success" ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.12.1"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "6cc825da-18f9-39b9-ad8f-129cb22274cc",
+          "identifier" : "4fcd76f2-ec9a-3794-b801-5103ffce26fc",
+          "name" : "Tail Streaming Log",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 522.5785123966942,
+            "y" : -433.25619834710744
+          },
+          "properties" : {
+            "tailfile-recursive-lookup" : "false",
+            "File Location" : "Local",
+            "tailfile-maximum-age" : "24 hours",
+            "File to Tail" : "/opt/nifi/nifi-current/input/output.data",
+            "Initial Start Position" : "Beginning of File",
+            "tailfile-lookup-frequency" : "10 minutes",
+            "tail-mode" : "Single file"
+          },
+          "propertyDescriptors" : {
+            "tail-base-directory" : {
+              "displayName" : "Base directory",
+              "identifiesControllerService" : false,
+              "name" : "tail-base-directory",
+              "sensitive" : false
+            },
+            "tailfile-recursive-lookup" : {
+              "displayName" : "Recursive lookup",
+              "identifiesControllerService" : false,
+              "name" : "tailfile-recursive-lookup",
+              "sensitive" : false
+            },
+            "File Location" : {
+              "displayName" : "State Location",
+              "identifiesControllerService" : false,
+              "name" : "File Location",
+              "sensitive" : false
+            },
+            "tailfile-maximum-age" : {
+              "displayName" : "Maximum age",
+              "identifiesControllerService" : false,
+              "name" : "tailfile-maximum-age",
+              "sensitive" : false
+            },
+            "Rolling Filename Pattern" : {
+              "displayName" : "Rolling Filename Pattern",
+              "identifiesControllerService" : false,
+              "name" : "Rolling Filename Pattern",
+              "sensitive" : false
+            },
+            "File to Tail" : {
+              "displayName" : "File(s) to Tail",
+              "identifiesControllerService" : false,
+              "name" : "File to Tail",
+              "sensitive" : false
+            },
+            "Initial Start Position" : {
+              "displayName" : "Initial Start Position",
+              "identifiesControllerService" : false,
+              "name" : "Initial Start Position",
+              "sensitive" : false
+            },
+            "tailfile-lookup-frequency" : {
+              "displayName" : "Lookup frequency",
+              "identifiesControllerService" : false,
+              "name" : "tailfile-lookup-frequency",
+              "sensitive" : false
+            },
+            "tail-mode" : {
+              "displayName" : "Tailing mode",
+              "identifiesControllerService" : false,
+              "name" : "tail-mode",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.TailFile",
           "yieldDuration" : "1 sec"
         } ],
         "remoteProcessGroups" : [ ],
