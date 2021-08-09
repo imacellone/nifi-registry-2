@@ -72,7 +72,7 @@
           "backPressureDataSizeThreshold" : "1 GB",
           "backPressureObjectThreshold" : 10000,
           "bends" : [ {
-            "x" : 856.0,
+            "x" : 416.0,
             "y" : 232.0
           } ],
           "componentType" : "CONNECTION",
@@ -163,8 +163,8 @@
           "name" : "PutMongo",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 656.0,
-            "y" : 584.0
+            "x" : 864.0,
+            "y" : 464.0
           },
           "properties" : {
             "Upsert" : "false",
@@ -281,8 +281,8 @@
           "name" : "AttributesToJSON",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 640.0,
-            "y" : 344.0
+            "x" : 240.0,
+            "y" : 272.0
           },
           "properties" : {
             "Destination" : "flowfile-content",
@@ -346,8 +346,8 @@
           "name" : "ExtractText",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 304.0,
-            "y" : 168.0
+            "x" : 240.0,
+            "y" : 72.0
           },
           "properties" : {
             "income" : "^(?:[^\\s]+\\s+){14}([^\\s]+)",
@@ -580,8 +580,8 @@
           "name" : "JoltTransformJSON",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 1296.0,
-            "y" : 344.0
+            "x" : 240.0,
+            "y" : 464.0
           },
           "properties" : {
             "jolt-spec" : "[{\n    \"operation\": \"modify-overwrite-beta\",\n    \"spec\": {\n      \"finalWeight\": \"=toLong\",\n      \"hoursPerWeek\": \"=toInteger\",\n      \"educationNum\": \"=toInteger\",\n      \"capitalLoss\": \"=toDouble\",\n      \"capitalGain\": \"=toDouble\",\n      \"age\": \"=toInteger\",\n      \"income\": \"=toLower\",\n      \"education\": \"=toLower\",\n      \"occupation\": \"=toLower\",\n      \"race\": \"=toLower\",\n      \"sex\": \"=toLower\",\n      \"nativeCountry\": \"=toLower\",\n      \"workClass\":\"=toLower\",\n      \"relationship\": \"=toLower\",\n      \"maritalStatus\": \"=toLower\"\n    }\n}]",
@@ -651,8 +651,8 @@
           "name" : "Read Kafka Topic",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 672.0,
-            "y" : -48.0
+            "x" : 240.0,
+            "y" : -120.0
           },
           "properties" : {
             "max.poll.records" : "10000",
