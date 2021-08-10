@@ -15,14 +15,14 @@
           "componentType" : "CONNECTION",
           "destination" : {
             "comments" : "",
-            "groupId" : "0971749e-1326-33ec-8525-c72fcd1d5c16",
-            "id" : "64e839f2-68a1-3037-b875-d76a896e023d",
-            "name" : "PublishKafka_2_6",
+            "groupId" : "08f40253-5cba-3af4-9ce9-eb832d51950c",
+            "id" : "d997103c-0154-3775-9678-2b81800d2686",
+            "name" : "Split Lines",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "0971749e-1326-33ec-8525-c72fcd1d5c16",
-          "identifier" : "3ed5b401-496d-36fd-98e9-6636d14e2ecb",
+          "groupIdentifier" : "08f40253-5cba-3af4-9ce9-eb832d51950c",
+          "identifier" : "ad909de9-6ff2-35f7-bbd4-b59c7ea1a20e",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
           "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -32,9 +32,39 @@
           "selectedRelationships" : [ "success" ],
           "source" : {
             "comments" : "",
-            "groupId" : "0971749e-1326-33ec-8525-c72fcd1d5c16",
+            "groupId" : "08f40253-5cba-3af4-9ce9-eb832d51950c",
             "id" : "4fcd76f2-ec9a-3794-b801-5103ffce26fc",
             "name" : "Tail Streaming Log",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "08f40253-5cba-3af4-9ce9-eb832d51950c",
+            "id" : "64e839f2-68a1-3037-b875-d76a896e023d",
+            "name" : "PublishKafka_2_6",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "08f40253-5cba-3af4-9ce9-eb832d51950c",
+          "identifier" : "6ddc0070-aaf8-3a58-97cf-7ab67efa38d5",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "splits" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "08f40253-5cba-3af4-9ce9-eb832d51950c",
+            "id" : "d997103c-0154-3775-9678-2b81800d2686",
+            "name" : "Split Lines",
             "type" : "PROCESSOR"
           },
           "zIndex" : 0
@@ -43,14 +73,14 @@
         "flowFileConcurrency" : "UNBOUNDED",
         "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
         "funnels" : [ ],
-        "identifier" : "0971749e-1326-33ec-8525-c72fcd1d5c16",
+        "identifier" : "08f40253-5cba-3af4-9ce9-eb832d51950c",
         "inputPorts" : [ ],
         "labels" : [ ],
         "name" : "Leitura Streaming",
         "outputPorts" : [ ],
         "position" : {
-          "x" : 390.0,
-          "y" : 97.0
+          "x" : 538.0,
+          "y" : 195.0
         },
         "processGroups" : [ ],
         "processors" : [ {
@@ -65,13 +95,13 @@
           "componentType" : "PROCESSOR",
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
-          "groupIdentifier" : "0971749e-1326-33ec-8525-c72fcd1d5c16",
+          "groupIdentifier" : "08f40253-5cba-3af4-9ce9-eb832d51950c",
           "identifier" : "64e839f2-68a1-3037-b875-d76a896e023d",
           "name" : "PublishKafka_2_6",
           "penaltyDuration" : "30 sec",
           "position" : {
-            "x" : 920.0,
-            "y" : -472.0
+            "x" : 736.0,
+            "y" : -8.0
           },
           "properties" : {
             "compression.type" : "none",
@@ -256,6 +286,70 @@
           "type" : "org.apache.nifi.processors.kafka.pubsub.PublishKafka_2_6",
           "yieldDuration" : "1 sec"
         }, {
+          "autoTerminatedRelationships" : [ "original", "failure" ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.12.1"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "08f40253-5cba-3af4-9ce9-eb832d51950c",
+          "identifier" : "d997103c-0154-3775-9678-2b81800d2686",
+          "name" : "Split Lines",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 736.0,
+            "y" : -440.0
+          },
+          "properties" : {
+            "Remove Trailing Newlines" : "true",
+            "Header Line Count" : "0",
+            "Line Split Count" : "1"
+          },
+          "propertyDescriptors" : {
+            "Remove Trailing Newlines" : {
+              "displayName" : "Remove Trailing Newlines",
+              "identifiesControllerService" : false,
+              "name" : "Remove Trailing Newlines",
+              "sensitive" : false
+            },
+            "Maximum Fragment Size" : {
+              "displayName" : "Maximum Fragment Size",
+              "identifiesControllerService" : false,
+              "name" : "Maximum Fragment Size",
+              "sensitive" : false
+            },
+            "Header Line Marker Characters" : {
+              "displayName" : "Header Line Marker Characters",
+              "identifiesControllerService" : false,
+              "name" : "Header Line Marker Characters",
+              "sensitive" : false
+            },
+            "Header Line Count" : {
+              "displayName" : "Header Line Count",
+              "identifiesControllerService" : false,
+              "name" : "Header Line Count",
+              "sensitive" : false
+            },
+            "Line Split Count" : {
+              "displayName" : "Line Split Count",
+              "identifiesControllerService" : false,
+              "name" : "Line Split Count",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.SplitText",
+          "yieldDuration" : "0 sec"
+        }, {
           "autoTerminatedRelationships" : [ ],
           "bulletinLevel" : "WARN",
           "bundle" : {
@@ -267,7 +361,7 @@
           "componentType" : "PROCESSOR",
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
-          "groupIdentifier" : "0971749e-1326-33ec-8525-c72fcd1d5c16",
+          "groupIdentifier" : "08f40253-5cba-3af4-9ce9-eb832d51950c",
           "identifier" : "4fcd76f2-ec9a-3794-b801-5103ffce26fc",
           "name" : "Tail Streaming Log",
           "penaltyDuration" : "30 sec",
